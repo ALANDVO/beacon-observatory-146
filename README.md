@@ -1,2 +1,10 @@
-# beacon-observatory-146
-Alan Vo | DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.
+# beacon-observatory-146 — Alan Vo
+
+> Work in progress. This checkpoint may be incomplete or fail tests. See PLAN.md and STATUS.md before use.
+
+
+Maintainer: Alan Vo <alanvo@gmail.com>
+
+---
+
+Alan Vo · [alanvo.net](https://alanvo.net) · [X: @alanvoasi](https://x.com/alanvoasi)

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "current_feature": "hello_api",
+  "features": [
+    {
+      "id": "skeleton_setup",
+      "title": "FastAPI Backend and React Frontend Setup",
+      "status": "done",
+      "acceptance": [
+        "Backend runs on FastAPI with /hello endpoint",
+        "Frontend React app serves index.html",
+        "Package.json and requirements.txt configured",
+        "Virtual environment created for Python dependencies"
+      ],
+      "implementation": [
+        "backend/main.py",
+        "src/index.html",
+        "package.json"
+      ],
+      "tests": [
+        "tests/backend/test_main.py",
+        "tests/frontend/test_app.js"
+      ]
+    },
+    {
+      "id": "hello_api",
+      "title": "Hello World API Endpoint",
+      "status": "in_progress",
+      "acceptance": [
+        "GET /api/hello returns greeting message",
+        "POST /api/hello accepts name parameter",
+        "GET /api/greet/{name} provides personalized greeting"
+      ],
+      "implementation": [
+        "backend/routers/hello.py",
+        "backend/main.py"
+      ],
+      "tests": [
+        "tests/backend/test_main.py"
+      ]
+    },
+    {
+      "id": "user_authentication",
+      "title": "User Authentication System",
+      "status": "planned",
+      "acceptance": [
+        "Users can register with email and password",
+        "Login generates JWT tokens",
+        "Protected routes require authentication"
+      ],
+      "implementation": [
+        "backend/routers/auth.py",
+        "backend/services/auth_service.py"
+      ],
+      "tests": [
+        "tests/backend/test_auth.py"
+      ]
+    }
+  ]
+}

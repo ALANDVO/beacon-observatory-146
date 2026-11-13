@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepTutor - AI-Powered Tutoring</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        
+        .logo {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .status {
+            background: #f0f9ff;
+            border: 1px solid #e0f2fe;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .status h3 {
+            color: #0369a1;
+            margin-top: 0;
+        }
+        
+        .api-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+        
+        .api-link:hover {
+            background: #5a67d8;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #999;
+        }
+        
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🧠</div>
+        <h1>DeepTutor</h1>
+        <p class="subtitle">AI-Powered Personalized Tutoring System</p>
+        
+        <div class="status">
+            <h3>✅ API Status</h3>
+            <p>Backend is running successfully</p>
+        </div>
+        
+        <div>
+            <a href="/api/hello" class="api-link" target="_blank">Test API</a>
+            <a href="/static/" class="api-link" target="_blank">Static Files</a>
+        </div>
+        
+        <div class="footer">
+            <p>Alan Vo's website: <a href="https://alanvo.net" target="_blank">alanvo.net</a></p>
+            <p>X profile: <a href="https://x.com/alanvoasi" target="_blank">@alanvoasi</a></p>
+            <p>v0.1.0 - Skeleton Phase</p>
+        </div>
+    </div>
+</body>
+</html>
