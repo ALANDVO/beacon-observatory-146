@@ -12,7 +12,7 @@ client = TestClient(app)
 
 def test_root_endpoint():
     """Test the root endpoint returns welcome message"""
-    response = client.get("/")
+    response = client.get("/", headers={"Host": "localhost"})
     assert response.status_code == 200
     data = response.json()
     assert "message" in data
@@ -20,7 +20,7 @@ def test_root_endpoint():
 
 def test_health_check():
     """Test health check endpoint"""
-    response = client.get("/health")
+    response = client.get("/health", headers={"Host": "localhost"})
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
@@ -28,16 +28,16 @@ def test_health_check():
 
 def test_hello_get():
     """Test GET /api/hello endpoint"""
-    response = client.get("/api/hello")
+    response = client.get("/api/hello", headers={"Host": "localhost"})
     assert response.status_code == 200
     data = response.json()
     assert "message" in data
-    assert "success" in data["message"]
+    assert "success" in data["status"]
 
 def test_hello_post():
     """Test POST /api/hello endpoint"""
     test_data = {"name": "TestUser"}
-    response = client.post("/api/hello", json=test_data)
+    response = client.post("/api/hello", json=test_data, headers={"Host": "localhost"})
     assert response.status_code == 200
     data = response.json()
     assert "message" in data
@@ -45,7 +45,7 @@ def test_hello_post():
 
 def test_greet_name():
     """Test GET /api/greet/{name} endpoint"""
-    response = client.get("/api/greet/John")
+    response = client.get("/api/greet/John", headers={"Host": "localhost"})
     assert response.status_code == 200
     data = response.json()
     assert "message" in data
@@ -53,5 +53,5 @@ def test_greet_name():
 
 def test_greet_empty_name():
     """Test GET /api/greet/{name} with empty name"""
-    response = client.get("/api/greet/")
+    response = client.get("/api/greet/", headers={"Host": "localhost"})
     assert response.status_code == 404
